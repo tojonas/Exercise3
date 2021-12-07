@@ -4,20 +4,11 @@ namespace Exercise3
 {
     public static class Ensure
     {
-        internal static uint Greater(uint value, int limit)
+        internal static T Greater<T>(T value, T min) where T : IComparable
         {
-            if( value < limit )
+            if( value.CompareTo(min) <= 0 )
             {
-                throw new ArgumentException(nameof(value), $"Invalid value [{value}] is less than [{limit}]");
-            }
-            return value;
-        }
-
-        internal static float Greater(float value, float limit)
-        {
-            if (value < limit)
-            {
-                throw new ArgumentException(nameof(value), $"Invalid value [{value}] is less than [{limit}]");
+                throw new ArgumentException(nameof(value), $"Invalid value [{value}] must be greater than [{min}]");
             }
             return value;
         }

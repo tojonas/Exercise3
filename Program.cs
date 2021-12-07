@@ -12,7 +12,7 @@ namespace Exercise3
             {
                 var person = new Person()
                 {
-                    Age = 52,
+                    Age = 1,
                     FirstName = "Jonas",
                     LastName = "Nilsson",
                     Height = 178,

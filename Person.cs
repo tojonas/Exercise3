@@ -13,7 +13,7 @@
             get { return _age; }
             set
             {
-                _age = Ensure.Greater(value, 0);
+                _age = Ensure.Greater<uint>(value, 0);
             } 
         }
         public string FirstName
