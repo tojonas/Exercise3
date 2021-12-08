@@ -57,9 +57,9 @@ namespace Exercise3
             };
             foreach (var animal in animals)
             {
-                if (animal is IPerson)
+                if (animal is IPerson person)
                 {
-                    (animal as IPerson).Talk();
+                    person.Talk();
                 }
                 else
                 {

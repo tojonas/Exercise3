@@ -16,12 +16,12 @@
 
         public static Person SetAge( Person person, uint age )
         {
-            Ensure.NotNull<Person>(person).Age = age;
+            Ensure.NotNull<Person>(person, nameof(person)).Age = age;
             return person;
         }
         public static Person SetHeight(Person person, float height)
         {
-            Ensure.NotNull<Person>(person).Height = height;
+            Ensure.NotNull<Person>(person, nameof(person)).Height = height;
             return person;
         }
     }
